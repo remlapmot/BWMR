@@ -130,7 +130,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
   plot1 <- ggplot2::ggplot(data = df1, ggplot2::aes(x = gammahat, y = Gammahat)) +  
     ggplot2::geom_pointrange(ggplot2::aes(ymin = Gammahat - sigmaY, ymax = Gammahat + sigmaY), color="gray59", size = 0.3) +
     ggplot2::geom_errorbarh(ggplot2::aes(xmin = gammahat - sigmaX, xmax = gammahat + sigmaX, height = 0), color="gray59") +
-    labs(x = "SNP-exposure effect", y = "SNP-outcome effect", title = "Plot1: Plot of data with standard error bar")
+    ggplot2::labs(x = "SNP-exposure effect", y = "SNP-outcome effect", title = "Plot1: Plot of data with standard error bar")
   
   # Plot2: Plot of Evidence Lower Bound (ELBO)
   iteration <- seq(1, (length(ELBO_set)), by = 1)
@@ -139,7 +139,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     ELBO_iter = ELBO_set
   )
   plot2 <- ggplot2::ggplot(df2, ggplot2::aes(x=iteration, y=ELBO_iter)) + geom_line(size = 0.5, color = "tomato1") + geom_point(size=0.5, color = "tomato1") +
-    labs(x = "iteration", y="elbo", title = "Plot2: Plot of evidence lower bound (elbo)")
+    ggplot2::labs(x = "iteration", y="elbo", title = "Plot2: Plot of evidence lower bound (elbo)")
   
   # Plot3: Posterior Mean of Weight of Each Observation
   serial_number <- seq(1, N, by = 1)
@@ -148,7 +148,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     serial_number = serial_number
   )
   plot3 <- ggplot2::ggplot(data = df3, mapping = ggplot2::aes(x = factor(serial_number), y = weight, fill = weight)) + geom_bar(stat = 'identity', position = 'dodge') +
-    labs(x = "observation No.", y = "weight", title = "Plot3: Posterior mean of weight of each observation") +
+    ggplot2::labs(x = "observation No.", y = "weight", title = "Plot3: Posterior mean of weight of each observation") +
     ylim(0, 1) +
     theme(axis.text.x = element_text(size = 5))
   # scale_x_discrete(breaks = seq(10, N, 20)) +
@@ -165,7 +165,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     ggplot2::geom_pointrange(ggplot2::aes(ymin = Gammahat - sigmaY, ymax = Gammahat + sigmaY), size = 0.3) +
     ggplot2::geom_errorbarh(ggplot2::aes(xmin = gammahat - sigmaX, xmax = gammahat + sigmaX, height = 0)) +
     geom_abline(intercept=0, slope=mu_beta, color="#990000", linetype="dashed", size=0.5) +
-    labs(x = "SNP-exposure effect", y = "SNP-outcome effect", title = "Plot4: Plot of weighted data and its regression result")
+    ggplot2::labs(x = "SNP-exposure effect", y = "SNP-outcome effect", title = "Plot4: Plot of weighted data and its regression result")
   
   
   ### LRVB and Standard Error ###
