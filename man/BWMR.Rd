@@ -50,13 +50,8 @@ BWMR(gammahat, Gammahat, sigmaX, sigmaY)
      Plot of Weighted Data and Its Regression Result.
 }
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Jia Zhao
-}
-\seealso{
 }
 \examples{
   library(BWMR)
