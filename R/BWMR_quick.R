@@ -169,8 +169,8 @@ BWMR_quick <- function(gammahat, Gammahat, sigmaX, sigmaY) {
   
   ## test
   W <- (mu_beta/se_beta)^2
-  # P_value <- 1 - pchisq(W, 1)
-  P_value <- pchisq(W, 1, lower.tail=F)
+  # P_value <- 1 - stats::pchisq(W, 1)
+  P_value <- stats::pchisq(W, 1, lower.tail=F)
   
   ## output
   output <- list(beta=mu_beta, se_beta=se_beta, P_value=P_value, tau=sqrt(sqtau), sigma=sqrt(sqsigma), mu_pi=a/(a+b))

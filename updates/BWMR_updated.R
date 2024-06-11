@@ -220,8 +220,8 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
   
   ## test
   W <- (mu_beta/se_beta)^2
-  # P_value <- 1 - pchisq(W, 1)
-  P_value <- pchisq(W, 1, lower.tail=F)
+  # P_value <- 1 - stats::pchisq(W, 1)
+  P_value <- stats::pchisq(W, 1, lower.tail=F)
   
   message("Estimate of beta=", mu_beta, ", se of beta=", se_beta, ", P-value=", P_value, ".")
   
