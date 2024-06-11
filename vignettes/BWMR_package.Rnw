@@ -1,5 +1,8 @@
 % -*- mode: noweb; noweb-default-code-mode: R-mode; -*-
 \documentclass[11pt]{article}
+
+% \VignetteIndexEntry{BWMR Package for causal inference based on summary statistics}
+% \VignetteKeyword{Mendelian randomization}
 %% Set my margins
 \setlength{\oddsidemargin}{0.0truein}
 \setlength{\evensidemargin}{0.0truein}
