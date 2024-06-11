@@ -5,6 +5,8 @@ Author: Jia Zhao
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Inference the causality based on BWMR method.
 License: GPL (>= 3)
+Depends: 
+    R (>= 3.5.0)
 Imports: 
     ggplot2
 Encoding: UTF-8
