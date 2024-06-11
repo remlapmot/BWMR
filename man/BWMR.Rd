@@ -60,7 +60,6 @@ Jia Zhao
 }
 \examples{
   library(BWMR)
-  library(ggplot2)
 
   data(ExampleData)
 

@@ -33,7 +33,6 @@ The BWMR software was created using R version 3.6. However, with the updates in 
 
 To use the updated version, please download this Github repository, and run BWMR with following code (an example):
 ```
-library(ggplot2)
 source("BWMR-master/updates/BWMR_updated.R") #load the updated version of BWMR's source code
 load("BWMR-master/data/ExampleData.RData") #load example data
 
