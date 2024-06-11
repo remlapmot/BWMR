@@ -138,7 +138,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     iteration = iteration,
     ELBO_iter = ELBO_set
   )
-  plot2 <- ggplot2::ggplot(df2, ggplot2::aes(x=iteration, y=ELBO_iter)) + ggplot2::geom_line(size = 0.5, color = "tomato1") + geom_point(size=0.5, color = "tomato1") +
+  plot2 <- ggplot2::ggplot(df2, ggplot2::aes(x=iteration, y=ELBO_iter)) + ggplot2::geom_line(size = 0.5, color = "tomato1") + ggplot2::geom_point(size=0.5, color = "tomato1") +
     ggplot2::labs(x = "iteration", y="elbo", title = "Plot2: Plot of evidence lower bound (elbo)")
   
   # Plot3: Posterior Mean of Weight of Each Observation
@@ -161,7 +161,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     sqsigmaY = sqsigmaY,
     w = pi_w
   )
-  plot4 <- ggplot2::ggplot(df4, ggplot2::aes(x=gammahat, y=Gammahat, color=w)) + geom_point(size = 0.3) +
+  plot4 <- ggplot2::ggplot(df4, ggplot2::aes(x=gammahat, y=Gammahat, color=w)) + ggplot2::geom_point(size = 0.3) +
     ggplot2::geom_pointrange(ggplot2::aes(ymin = Gammahat - sigmaY, ymax = Gammahat + sigmaY), size = 0.3) +
     ggplot2::geom_errorbarh(ggplot2::aes(xmin = gammahat - sigmaX, xmax = gammahat + sigmaX, height = 0)) +
     geom_abline(intercept=0, slope=mu_beta, color="#990000", linetype="dashed", size=0.5) +
