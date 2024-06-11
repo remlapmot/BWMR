@@ -210,7 +210,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
   I <- diag(3*N+4)
   Sigma_hat <- try(solve(I-V%*%H)%*%V)
   
-  if (class(Sigma_hat) == "try-error"){
+  if (inherits(Sigma_hat, "try-error")){
     message("Invalid IVs!")
     return(list(beta=NA, se_beta=NA, P_value=NA))
   } else{
