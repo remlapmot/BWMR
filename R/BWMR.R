@@ -16,10 +16,6 @@
 ## plot4                            Plot of Weighted Data and Its Regression Result.
 
 
-# packages
-library("ggplot2")
-
-
 # known parameters for the prior distributions
 sqsigma0 <- (1e+6)^2
 alpha <- 100

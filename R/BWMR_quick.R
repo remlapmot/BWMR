@@ -14,10 +14,6 @@
 ## sigma                            the estimate of sigma
 ## pi                               posterior mean of pi
 
-# packages
-library("ggplot2")
-library("reshape2")
-
 
 # known parameters for the prior distributions
 sqsigma0 <- (1e+6)^2
