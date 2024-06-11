@@ -8,3 +8,4 @@ Description: Inference the causality based on BWMR method
 Encoding: UTF-8
 LazyData: true
 License: GPL (>= 3)
+Imports: ggplot2
