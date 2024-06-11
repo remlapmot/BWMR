@@ -1,11 +1,12 @@
-Package: BWMR
 Type: Package
+Package: BWMR
 Title: Bayesian Weighted Mendelian Randomization (BWMR)
 Version: 0.1.1
 Author: Jia Zhao
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: Inference the causality based on BWMR method.
+License: GPL (>= 3)
+Imports: 
+    ggplot2
 Encoding: UTF-8
 LazyData: true
-License: GPL (>= 3)
-Imports: ggplot2
