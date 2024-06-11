@@ -16,11 +16,8 @@
 ## plot4                            Plot of Weighted Data and Its Regression Result.
 
 
-# known parameters for the prior distributions
-sqsigma0 <- (1e+6)^2
-
 ## define function to calculate ELBO and E[Lc] (the approximate log-likelihood)
-ELBO_func <- function(N, gammahat, Gammahat, sqsigmaX, sqsigmaY, mu_beta, sqsigma_beta, mu_gamma, sqsigma_gamma, a, b, pi_w, sqsigma, sqtau, alpha=100) {
+ELBO_func <- function(N, gammahat, Gammahat, sqsigmaX, sqsigmaY, mu_beta, sqsigma_beta, mu_gamma, sqsigma_gamma, a, b, pi_w, sqsigma, sqtau, alpha=100, sqsigma0 = (1e+6)^2) {
   # + E[log p(gammahat, sqsigmaX | gamma)]
   l <- - 0.5*sum(log(sqsigmaX)) - 0.5*sum(((gammahat-mu_gamma)^2+sqsigma_gamma)/sqsigmaX)    
   # + E[log p(Gammahat, sqsigmaY| beta, gamma, w, sqtau)]
@@ -54,7 +51,7 @@ ELBO_func <- function(N, gammahat, Gammahat, sqsigmaX, sqsigmaY, mu_beta, sqsigm
 }
 
 
-BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY, alpha=100) {
+BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY, alpha=100, sqsigma0 = (1e+6)^2) {
   ## data
   N <- length(gammahat)
   sqsigmaX <- sigmaX^2
