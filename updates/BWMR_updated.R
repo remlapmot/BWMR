@@ -147,7 +147,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     weight = pi_w,
     serial_number = serial_number
   )
-  plot3 <- ggplot2::ggplot(data = df3, mapping = ggplot2::aes(x = factor(serial_number), y = weight, fill = weight)) + geom_bar(stat = 'identity', position = 'dodge') +
+  plot3 <- ggplot2::ggplot(data = df3, mapping = ggplot2::aes(x = factor(serial_number), y = weight, fill = weight)) + ggplot2::geom_bar(stat = 'identity', position = 'dodge') +
     ggplot2::labs(x = "observation No.", y = "weight", title = "Plot3: Posterior mean of weight of each observation") +
     ylim(0, 1) +
     theme(axis.text.x = element_text(size = 5))
