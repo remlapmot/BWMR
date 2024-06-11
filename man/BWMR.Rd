@@ -64,7 +64,8 @@ Jia Zhao
 
   data(ExampleData)
 
-  MRres <- BWMR(ExampleData$beta.exposure, ExampleData$beta.outcome, ExampleData$se.exposure, ExampleData$se.outcome)
+  MRres <- BWMR(ExampleData$beta.exposure, ExampleData$beta.outcome, 
+                ExampleData$se.exposure, ExampleData$se.outcome)
 
   beta.hat <- MRres$beta
   beta.se <- MRres$se_beta
