@@ -1,4 +1,3 @@
-Type: Package
 Package: BWMR
 Title: Bayesian Weighted Mendelian Randomization (BWMR)
 Version: 0.1.1
