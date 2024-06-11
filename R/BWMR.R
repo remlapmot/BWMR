@@ -138,7 +138,7 @@ BWMR <- function(gammahat, Gammahat, sigmaX, sigmaY) {
     iteration = iteration,
     ELBO_iter = ELBO_set
   )
-  plot2 <- ggplot2::ggplot(df2, ggplot2::aes(x=iteration, y=ELBO_iter)) + geom_line(size = 0.5, color = "tomato1") + geom_point(size=0.5, color = "tomato1") +
+  plot2 <- ggplot2::ggplot(df2, ggplot2::aes(x=iteration, y=ELBO_iter)) + ggplot2::geom_line(size = 0.5, color = "tomato1") + geom_point(size=0.5, color = "tomato1") +
     ggplot2::labs(x = "iteration", y="elbo", title = "Plot2: Plot of evidence lower bound (elbo)")
   
   # Plot3: Posterior Mean of Weight of Each Observation
