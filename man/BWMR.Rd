@@ -7,7 +7,7 @@
 Estimate the causal effect between the exposure and the outcome.
 }
 \usage{
-BWMR(gammahat, Gammahat, sigmaX, sigmaY)
+BWMR(gammahat, Gammahat, sigmaX, sigmaY, alpha = 100, sqsigma0 = (1e6)^2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,6 +23,8 @@ BWMR(gammahat, Gammahat, sigmaX, sigmaY)
   \item{sigmaY}{
      Standard errors of SNP-outcome effects.
 }
+  \item{alpha}{Value of alpha.}
+  \item{sqsigma0}{Value of sqsigma0.}
 }
 \details{
   \code{BWMR} obtain the causal effect based on summary statistics.
