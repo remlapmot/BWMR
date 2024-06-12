@@ -109,24 +109,40 @@ cat("p-value of the effect of exposure on outcome: ", fit.BWMR$P_value)
 Besides, the `\texttt{BWMR}' function also provides the visualization of data and MR result.
 
 Plot of data with standard error bar:
-<<plot1, fig.height=3, fig.width=4>>=
+\begin{figure}
+\begin{center}
+<<plot1, fig=TRUE, height=3, width=4>>=
 fit.BWMR$plot1
 @
+\end{center}
+\end{figure}
 
 Plot of evidence lower bound (elbo):
-<<plot2, fig.height=3, fig.width=4>>=
+\begin{figure}
+\begin{center}
+<<plot2, fig=TRUE, height=3, width=4>>=
 fit.BWMR$plot2
 @
+\end{center}
+\end{figure}
 
 Posterior mean of weight of each observation:
-<<plot3, fig.height=3, fig.width=7>>=
+\begin{figure}
+\begin{center}
+<<plot3, fig=TRUE, height=3, width=7>>=
 fit.BWMR$plot3
 @
+\end{center}
+\end{figure}
 
 Plot of weighted data and its regression result:
-<<plot4, fig.height=3, fig.width=6>>=
+\begin{figure}
+\begin{center}
+<<plot4, fig=TRUE, height=3, width=6>>=
 fit.BWMR$plot4
 @
+\end{center}
+\end{figure}
 
 If we are only interested in the MR results, we can run the `\texttt{BWMR\_quick}' function without visualization, which is more time-efficient.
 <<BWMR_quick-fit, message=FALSE>>=
