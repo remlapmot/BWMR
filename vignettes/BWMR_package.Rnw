@@ -44,8 +44,8 @@ $~^6$ Centre for Quantitative Medicine, Duke-NUS Medical School, Singapore.\\
 % \SweaveOpts{engine=R, echo=TRUE, pdf=TRUE}
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
-% \SweaveOpts{concordance=TRUE}
 \maketitle
 
 \section{Overview}
