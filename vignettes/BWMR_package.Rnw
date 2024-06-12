@@ -2,6 +2,7 @@
 \documentclass[11pt]{article}
 
 % \VignetteIndexEntry{BWMR Package for causal inference based on summary statistics}
+% \VignetteDepends{BWMR}
 % \VignetteKeyword{Mendelian randomization}
 \usepackage{grfext}
 
